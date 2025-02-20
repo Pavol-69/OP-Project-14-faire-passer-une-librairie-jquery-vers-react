@@ -1,0 +1,18 @@
+@use "./variables.scss" as *;
+
+.elm-ct {
+  /*Display*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ver {
+  /*Display*/
+  flex-direction: column;
+}
+
+.hor {
+  /*Display*/
+  flex-direction: row;
+}
