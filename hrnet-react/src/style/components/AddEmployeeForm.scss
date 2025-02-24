@@ -1,0 +1,45 @@
+@use "../variables.scss" as *;
+
+.add_epy_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.add_epy_form input,
+.add_epy_form select,
+.add_epy_form fieldset {
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.add_epy_form label,
+.add_epy_form fieldset {
+  font-size: 15px;
+
+  margin-bottom: 5px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.add_epy_form button {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin: auto;
+  cursor: pointer;
+}
+
+@media (max-width: $mobile-size) {
+  .add_epy_form {
+    padding: 30px;
+  }
+}

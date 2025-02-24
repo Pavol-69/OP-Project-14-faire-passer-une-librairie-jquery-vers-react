@@ -1,8 +1,15 @@
 import "../style/generalCSS.scss";
-import "../style/pages/EmployeeListPage.scss";
+import "../style/pages/HomePage.scss";
+import Banner from "../components/Banner";
+import AddEmployeeForm from "../components/AddEmployeeForm";
 
 function HomePage() {
-  return <div>Accueil</div>;
+  return (
+    <div className="hp_ctn elm_ct ver">
+      <Banner />
+      <AddEmployeeForm />
+    </div>
+  );
 }
 
 export default HomePage;
