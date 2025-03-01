@@ -1,7 +1,13 @@
 import "../style/generalCSS.scss";
 import "../style/components/AddEmployeeForm.scss";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 function AddEmployeeForm() {
+  const [birthtDate, setBirthDate] = useState(new Date("01/01/1990"));
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <form className="add_epy_form">
       <label htmlFor="first-name">First Name</label>
@@ -11,10 +17,18 @@ function AddEmployeeForm() {
       <input type="text" id="last-name" />
 
       <label htmlFor="date-of-birth">Date of Birth</label>
-      <input id="date-of-birth" type="text" />
+      <DatePicker
+        selected={birthtDate}
+        onChange={(date) => setBirthDate(date)}
+        showYearDropdown
+        showMonthDropdown
+      />
 
       <label htmlFor="start-date">Start Date</label>
-      <input id="start-date" type="text" />
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+      />
 
       <fieldset className="address">
         <legend>Address</legend>
@@ -42,6 +56,7 @@ function AddEmployeeForm() {
       </select>
 
       <button
+        className="add_epy_form_button"
         onClick={(e) => {
           e.preventDefault();
           console.log("toto");

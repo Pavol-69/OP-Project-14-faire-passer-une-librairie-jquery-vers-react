@@ -30,12 +30,32 @@
   padding: 20px;
 }
 
-.add_epy_form button {
+.add_epy_form_button {
   width: 200px;
   height: 50px;
   font-size: 20px;
   margin: auto;
   cursor: pointer;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.react-datepicker__navigation button {
+  width: 50px;
+  height: 17px;
+  top: 8px;
+}
+
+.react-datepicker__current-month {
+  display: none;
+}
+
+.react-datepicker__month-read-view--selected-month,
+.react-datepicker__year-read-view--selected-year {
+  margin-right: 5px;
 }
 
 @media (max-width: $mobile-size) {
