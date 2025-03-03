@@ -11,10 +11,10 @@ function AddEmployeeForm() {
   return (
     <form className="add_epy_form">
       <label htmlFor="first-name">First Name</label>
-      <input type="text" id="first-name" />
+      <input className="add_epy_form_input" type="text" id="first-name" />
 
       <label htmlFor="last-name">Last Name</label>
-      <input type="text" id="last-name" />
+      <input className="add_epy_form_input" type="text" id="last-name" />
 
       <label htmlFor="date-of-birth">Date of Birth</label>
       <DatePicker
@@ -22,32 +22,38 @@ function AddEmployeeForm() {
         onChange={(date) => setBirthDate(date)}
         showYearDropdown
         showMonthDropdown
+        dateFormat="dd/MM/yyyy"
+        dropdownMode="select"
       />
 
       <label htmlFor="start-date">Start Date</label>
       <DatePicker
         selected={startDate}
         onChange={(date) => setStartDate(date)}
+        showYearDropdown
+        showMonthDropdown
+        dateFormat="dd/MM/yyyy"
+        dropdownMode="select"
       />
 
-      <fieldset className="address">
+      <fieldset className=" add_epy_form_input address">
         <legend>Address</legend>
 
         <label htmlFor="street">Street</label>
-        <input id="street" type="text" />
+        <input className="add_epy_form_input" id="street" type="text" />
 
         <label htmlFor="city">City</label>
-        <input id="city" type="text" />
+        <input className="add_epy_form_input" id="city" type="text" />
 
         <label htmlFor="state">State</label>
-        <select name="state" id="state"></select>
+        <select className="add_epy_form_input" name="state" id="state"></select>
 
         <label htmlFor="zip-code">Zip Code</label>
-        <input id="zip-code" type="number" />
+        <input className="add_epy_form_input" id="zip-code" type="number" />
       </fieldset>
 
       <label htmlFor="department">Department</label>
-      <select name="department" id="department">
+      <select className="add_epy_form_input" name="department" id="department">
         <option>Sales</option>
         <option>Marketing</option>
         <option>Engineering</option>
