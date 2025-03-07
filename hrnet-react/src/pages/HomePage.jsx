@@ -6,7 +6,7 @@ import AddEmployeeForm from "../components/AddEmployeeForm";
 function HomePage() {
   return (
     <div className="hp_ctn elm_ct ver">
-      <Banner />
+      <Banner toPage={"list"} />
       <AddEmployeeForm />
     </div>
   );

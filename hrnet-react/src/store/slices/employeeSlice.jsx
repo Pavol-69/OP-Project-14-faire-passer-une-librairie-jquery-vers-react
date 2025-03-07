@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getNewId } from "../selectors";
 
 export const employeeSlice = createSlice({
   name: "employees",
   initialState: {},
   reducers: {
     addEmployee: (currentState, action) => {
-      const listWithNewEmployee = [...currentState, action.payload];
+      const newEmployee = action.payload;
+      newEmployee.id = getNewId(currentState);
+      const listWithNewEmployee = [...currentState, newEmployee];
       return listWithNewEmployee;
     },
     removeEmployee: (currentState, action) => {

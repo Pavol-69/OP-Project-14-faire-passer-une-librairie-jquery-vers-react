@@ -12,8 +12,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
-
-            <Route path="/employee-list" element={<EmployeeListPage />} />
+            <Route path="/employees-list" element={<EmployeeListPage />} />
           </Routes>
         </Router>
       </React.StrictMode>

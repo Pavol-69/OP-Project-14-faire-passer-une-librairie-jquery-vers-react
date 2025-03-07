@@ -37,13 +37,50 @@
 
 .banner_ctn .title {
   position: absolute;
+  top: 50px;
   font-size: 120px;
   font-weight: 700;
   color: $wht;
   text-shadow: $blk 1px 0 10px;
 }
 
+.banner_ctn .banner_btn {
+  position: absolute;
+  top: 230px;
+  background-color: $blk;
+  text-decoration: none;
+  color: $wht;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: solid 1px $wht;
+}
+
+.banner_ctn .banner_btn {
+  position: absolute;
+  top: 230px;
+  background-color: rgb(107, 107, 107);
+  text-decoration: none;
+  color: $wht;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: solid 1px $wht;
+}
+
+.banner_ctn .banner_btn:hover {
+  background-color: rgb(123, 123, 123);
+}
+
 @media (max-width: $mobile-size) {
+  .banner_ctn .banner_btn {
+    position: absolute;
+    top: 180px;
+    font-size: 15px;
+  }
+
   .banner_ctn {
     height: 300px;
     width: 100%;

@@ -7,25 +7,51 @@
   width: 100%;
   padding: 50px;
   box-sizing: border-box;
+  gap: 10px;
 }
 
-.add_epy_form_input {
-  margin-bottom: 20px;
-  font-size: 20px;
-  padding: 5px 10px;
+.add_epy_form_input .MuiInputBase-input,
+.add_epy_form_input .MuiInputLabel-root,
+.add_epy_form_input .MuiSelect-icon {
+  color: $wht;
+}
+
+.add_epy_form_input .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(150, 150, 150, 1);
+}
+
+/* Appliquer la couleur de bordure au survol, sauf quand il est en focus */
+.add_epy_form_input
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: $wht !important;
+}
+
+/* Appliquer la couleur de bordure quand le champ est sélectionné (focus) */
+.add_epy_form_input
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(25, 118, 210) !important;
 }
 
 .add_epy_form label,
 .add_epy_form fieldset {
   font-size: 15px;
-
   margin-bottom: 5px;
+}
+
+.add_epy_form label,
+.add_epy_form_input .MuiInputBase-input,
+.add_epy_form fieldset,
+.add_epy_form_button {
+  font-family: Atkinson Hyperlegible Mono;
 }
 
 .address {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  gap: 10px;
 }
 
 .add_epy_form_button {
@@ -34,29 +60,26 @@
   font-size: 20px;
   margin: auto;
   cursor: pointer;
+  margin-top: 15px;
 }
 
-.react-datepicker__input-container input {
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  font-size: 20px;
-  padding: 5px 10px;
+.add_epy_form_input button {
+  color: $wht; /* Choisis la couleur que tu veux */
 }
 
-.react-datepicker__navigation button {
-  width: 50px;
-  height: 17px;
-  top: 8px;
+.add_epy_form_input button:hover {
+  background-color: rgba(150, 150, 150, 0.2); /* Fond gris clair au survol */
 }
 
-.react-datepicker__current-month {
-  display: none;
-}
-
-.react-datepicker__month-read-view--selected-month,
-.react-datepicker__year-read-view--selected-year {
-  margin-right: 5px;
+.add_epy_form_input .custom-calendar-icon .MuiInputAdornment-root:focus {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Fond plus sombre quand il est en focus */
+  border-radius: 50%;
+  padding: 4px;
 }
 
 @media (max-width: $mobile-size) {
