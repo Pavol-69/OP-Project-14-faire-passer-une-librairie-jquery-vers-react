@@ -1,0 +1,46 @@
+@use "../../variables.scss" as *;
+
+.data_table_ctn {
+  display: flex;
+  flex-direction: column;
+}
+
+.data_table_header,
+.data_table_line_ctn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.cell {
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.data_table_header,
+.data_table_line_ctn {
+  border-bottom: solid 1px $wht;
+}
+
+.header_cell {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.filter_btn {
+  cursor: pointer;
+}
+
+@media (max-width: $mobile-size) {
+  .cell {
+    font-size: 10px;
+  }
+}

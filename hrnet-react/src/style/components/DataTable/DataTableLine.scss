@@ -1,0 +1,9 @@
+@use "../../variables.scss" as *;
+
+.data_table_line_ctn:hover {
+  background: rgb(60, 60, 60);
+}
+
+.data_table_line_btn {
+  cursor: pointer;
+}

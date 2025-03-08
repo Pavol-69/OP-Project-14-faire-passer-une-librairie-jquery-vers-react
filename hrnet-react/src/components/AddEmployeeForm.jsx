@@ -27,12 +27,14 @@ import { employeeSlice } from "../store/slices/employeeSlice";
 function AddEmployeeForm() {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
+  const [birthDate, setBirthDate] = useState(dayjs("12/20/1991"));
+  const [startDate, setStartDate] = useState(dayjs("01/01/2025"));
   const [employee, setEmployee] = useState({
     firstName: "",
     lastName: "",
-    startDate: "01/01/2025",
+    startDate: dayjs(startDate).format("DD/MM/YYYY"),
     department: "",
-    birthDate: "20/12/1991",
+    birthDate: dayjs(birthDate).format("DD/MM/YYYY"),
     street: "",
     city: "",
     state: "",
@@ -44,14 +46,7 @@ function AddEmployeeForm() {
     setEmployee({ ...employee, [e.target.name]: e.target.value });
   }
 
-  const [birthDate, setBirthDate] = useState(
-    dayjs(employee.birthDate, "DD/MM/YYYY")
-  );
-  const [startDate, setStartDate] = useState(
-    dayjs(employee.startDate, "DD/MM/YYYY")
-  );
-
-  return (
+  return birthDate != "" && startDate != "" ? (
     <>
       <form className="add_epy_form">
         <TextField
@@ -169,6 +164,8 @@ function AddEmployeeForm() {
         </DialogActions>
       </Dialog>
     </>
+  ) : (
+    <></>
   );
 }
 
