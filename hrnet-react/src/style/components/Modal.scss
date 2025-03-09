@@ -1,0 +1,23 @@
+@use "../variables.scss" as *;
+
+.MuiTypography-root,
+.MuiDialogActions-root {
+  background-color: rgb(60, 60, 60);
+  color: $wht;
+}
+
+.MuiDialogContent-root {
+  background-color: $blk;
+  color: $wht;
+  width: 500px;
+}
+
+@media (max-width: $mobile-size) {
+  .MuiDialogContent-root {
+    width: 260px;
+  }
+
+  .css-kw13he-MuiDialogContent-root {
+    padding: 0px;
+  }
+}

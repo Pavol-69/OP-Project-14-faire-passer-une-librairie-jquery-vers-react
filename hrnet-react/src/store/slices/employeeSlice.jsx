@@ -11,9 +11,19 @@ export const employeeSlice = createSlice({
       const listWithNewEmployee = [...currentState, newEmployee];
       return listWithNewEmployee;
     },
+    updateEmployee: (currentState, action) => {
+      const employeesUpdated = currentState.map((employee) => {
+        if (employee.id == action.payload.id) {
+          return action.payload;
+        } else {
+          return employee;
+        }
+      });
+      return employeesUpdated;
+    },
     removeEmployee: (currentState, action) => {
       const list = [...currentState].filter(
-        (item, index) => index !== action.payload
+        (item) => item.id !== action.payload.id
       );
       return list;
     },

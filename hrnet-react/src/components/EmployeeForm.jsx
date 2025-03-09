@@ -7,39 +7,22 @@ import { states } from "../store/states";
 import { departments } from "../store/departments";
 import DropDownMenu from "./DropDownMenu";
 import TextField from "@mui/material/TextField";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-} from "@mui/material";
 
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 
-import { useDispatch } from "react-redux";
+function AddEmployeeForm({ employee, setEmployee, action }) {
+  const birthDateFr = employee.birthDate.split("/");
+  const startDateFr = employee.startDate.split("/");
 
-import { employeeSlice } from "../store/slices/employeeSlice";
-
-function AddEmployeeForm() {
-  const dispatch = useDispatch();
-  const [showModal, setShowModal] = useState(false);
-  const [birthDate, setBirthDate] = useState(dayjs("12/20/1991"));
-  const [startDate, setStartDate] = useState(dayjs("01/01/2025"));
-  const [employee, setEmployee] = useState({
-    firstName: "",
-    lastName: "",
-    startDate: dayjs(startDate).format("DD/MM/YYYY"),
-    department: "",
-    birthDate: dayjs(birthDate).format("DD/MM/YYYY"),
-    street: "",
-    city: "",
-    state: "",
-    zipCode: "",
-  });
+  const [birthDate, setBirthDate] = useState(
+    dayjs(`${birthDateFr[1]}/${birthDateFr[0]}/${birthDateFr[2]}`)
+  );
+  const [startDate, setStartDate] = useState(
+    dayjs(`${startDateFr[1]}/${startDateFr[0]}/${startDateFr[2]}`)
+  );
 
   function onChangeHandle(e) {
     e.preventDefault();
@@ -54,12 +37,14 @@ function AddEmployeeForm() {
           label="First Name"
           onChange={(e) => onChangeHandle(e)}
           className="add_epy_form_input"
+          value={employee.firstName}
         />
         <TextField
           name="lastName"
           label="Last Name"
           onChange={(e) => onChangeHandle(e)}
           className="add_epy_form_input"
+          value={employee.lastName}
         />
 
         <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -103,12 +88,14 @@ function AddEmployeeForm() {
             label="Street"
             onChange={(e) => onChangeHandle(e)}
             className="add_epy_form_input"
+            value={employee.street}
           />
           <TextField
             name="city"
             label="City"
             onChange={(e) => onChangeHandle(e)}
             className="add_epy_form_input"
+            value={employee.city}
           />
           <DropDownMenu
             label={"State"}
@@ -122,6 +109,7 @@ function AddEmployeeForm() {
             label="Zip Code"
             onChange={(e) => onChangeHandle(e)}
             className="add_epy_form_input"
+            value={employee.zipCode}
           />
         </fieldset>
         <DropDownMenu
@@ -135,34 +123,12 @@ function AddEmployeeForm() {
         <button
           className="add_epy_form_button"
           onClick={(e) => {
-            e.preventDefault();
-            setShowModal(true);
-            dispatch(employeeSlice.actions.addEmployee(employee));
+            action(e, employee);
           }}
         >
           Save
         </button>
       </form>
-      <Dialog open={showModal} onClose={() => setShowModal(false)}>
-        <DialogTitle>Employee added !</DialogTitle>
-        <DialogContent>
-          The employee has been added with the following informations : <br />
-          {`- First Name : ${employee.firstName}`} <br />
-          {`- last Name : ${employee.lastName}`} <br />
-          {`- Start Date : ${employee.startDate}`}
-          <br />
-          {`- Birth Date : ${employee.birthDate}`}
-          <br />
-          {`- Street : ${employee.street}`} <br />
-          {`- City : ${employee.city}`} <br />
-          {`- State : ${employee.state}`} <br />
-          {`- Zip Code : ${employee.zipCode}`} <br />
-          {`- Department : ${employee.department}`} <br />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setShowModal(false)}>Close</Button>
-        </DialogActions>
-      </Dialog>
     </>
   ) : (
     <></>

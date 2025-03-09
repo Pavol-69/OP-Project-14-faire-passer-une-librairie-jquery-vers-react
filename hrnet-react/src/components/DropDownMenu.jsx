@@ -18,9 +18,7 @@ function DropDownMenu({ label, value, name, data, onChangeHandle }) {
       >
         {data.map((item, index) => (
           <MenuItem key={index} value={item.name}>
-            {item.abbreviation
-              ? `${item.name}, ${item.abbreviation}`
-              : item.name}
+            {item.name}
           </MenuItem>
         ))}
       </Select>
