@@ -8,7 +8,7 @@
 .data_table_header,
 .data_table_line_ctn {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   gap: 10px;
   padding: 10px;
 }
@@ -37,10 +37,4 @@
 
 .filter_btn {
   cursor: pointer;
-}
-
-@media (max-width: $mobile-size) {
-  .cell {
-    font-size: 10px;
-  }
 }

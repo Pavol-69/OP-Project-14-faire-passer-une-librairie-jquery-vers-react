@@ -7,3 +7,17 @@
 .data_table_line_btn {
   cursor: pointer;
 }
+
+.data_table_line_btn_ctn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.data_table_line_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+}

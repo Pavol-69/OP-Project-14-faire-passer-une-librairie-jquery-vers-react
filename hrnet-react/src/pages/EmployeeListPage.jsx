@@ -20,10 +20,10 @@ function EmployeeListPage() {
   ];
 
   return (
-    <>
+    <div className="epy_list_page_ctn">
       <Banner toPage={"form"} />
       <DataTable data={employees} columns={columns} />
-    </>
+    </div>
   );
 }
 
