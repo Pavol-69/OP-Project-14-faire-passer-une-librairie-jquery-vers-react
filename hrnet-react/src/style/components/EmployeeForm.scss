@@ -64,22 +64,21 @@
 }
 
 .add_epy_form_input button {
-  color: $wht; /* Choisis la couleur que tu veux */
+  color: $wht;
 }
 
 .add_epy_form_input button:hover {
-  background-color: rgba(150, 150, 150, 0.2); /* Fond gris clair au survol */
+  background-color: rgba(150, 150, 150, 0.2);
 }
 
 .add_epy_form_input .custom-calendar-icon .MuiInputAdornment-root:focus {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.2
-  ); /* Fond plus sombre quand il est en focus */
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   padding: 4px;
+}
+
+.MuiDayCalendar-weekDayLabel {
+  background-color: #ffffff !important;
 }
 
 @media (max-width: $mobile-size) {

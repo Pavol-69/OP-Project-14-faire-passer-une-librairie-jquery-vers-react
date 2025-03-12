@@ -1,5 +1,5 @@
 import "../style/generalCSS.scss";
-import "../style/components/AddEmployeeForm.scss";
+import "../style/components/EmployeeForm.scss";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";

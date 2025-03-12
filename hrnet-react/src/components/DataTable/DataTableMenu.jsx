@@ -35,7 +35,7 @@ function DataTableMenu({
 
   // Calcul le delta dans lequel on se trouve par rapport au nombre de ligne affichées
   function delta() {
-    return `${1 + (numPage - 1) * rowPerPage}-${
+    return `${nbTotRows > 0 ? 1 + (numPage - 1) * rowPerPage : "0"}-${
       numPage * rowPerPage > nbTotRows ? nbTotRows : numPage * rowPerPage
     }`;
   }

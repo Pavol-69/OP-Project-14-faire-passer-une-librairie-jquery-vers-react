@@ -1,5 +1,5 @@
 import "../style/generalCSS.scss";
-import "../style/components/AddEmployeeForm.scss";
+import "../style/components/EmployeeForm.scss";
 //import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";

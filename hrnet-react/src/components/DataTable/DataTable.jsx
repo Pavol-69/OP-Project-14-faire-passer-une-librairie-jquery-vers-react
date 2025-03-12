@@ -23,6 +23,7 @@ function DataTable({ data, columns }) {
   const [rowPerPage, setRowPerPage] = useState(5);
   const [numPage, setNumPage] = useState(1);
   const [searchText, setSearchText] = useState("");
+  const [loading, setLoading] = useState(true);
   // Pour chaque colonne
   // 0, on ne fait rien
   // 1, on tri dans un sens
@@ -31,6 +32,7 @@ function DataTable({ data, columns }) {
 
   useEffect(() => {
     setFilteredData(data);
+    setLoading(false);
     displayData(filters, searchText);
   }, [data]);
 
@@ -57,7 +59,7 @@ function DataTable({ data, columns }) {
       });
     }
 
-    // Fonction de filtrage intégrée
+    // fonction recherche
     const dataBis = dataFiltersBis.filter((row) =>
       Object.values(row).some(
         (value) =>
@@ -119,7 +121,7 @@ function DataTable({ data, columns }) {
     }
   }
 
-  return filteredData != "" ? (
+  return !loading != "" ? (
     <div className="data_table_ctn">
       <DataTableMenu
         rowPerPage={rowPerPage}
