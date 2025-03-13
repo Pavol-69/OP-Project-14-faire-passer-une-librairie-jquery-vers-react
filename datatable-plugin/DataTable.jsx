@@ -1,5 +1,5 @@
-import "../../style/generalCSS.scss";
-import "../../style/components/DataTable/DataTable.scss";
+import "./style/generalCSS.scss";
+import "./style/DataTable.scss";
 
 import DataTableLine from "./DataTableLine";
 import DataTableMenu from "./DataTableMenu";
@@ -8,7 +8,7 @@ import DataTableHeader from "./DataTableHeader";
 import { useState, useEffect } from "react";
 
 // Crée un composant DataTable, en fonction de l'objet data
-// => Ce composant est générique, et est voué à être réutiliser avec des données complètement différentes
+// => Ce composant est générique, et est voué à être réutiliser avec des données complè tement différentes
 // => On a donc besoin en données d'entrée de la data, et aussi des colonnes qui sera sous le format suivant :
 // columns = [{
 // name : "Nom Colonne"

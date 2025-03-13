@@ -29,19 +29,29 @@ This web app has been develop in order to replace an old app made with jQuery
 
     One jQuery was not replaced by another existing one, but has been coded from scratch : the DataTable
 
-        - Necessary props : the data (here, the employees list), and all the columns name, with which element data we are refering to
-            => Should be like the following example :
-                const columns = [
-                    { name: "First Name", selector: (row) => row.firstName },
-                    { name: "Last Name", selector: (row) => row.lastName },
-                    { name: "Start Date", selector: (row) => row.startDate },
-                    { name: "Department", selector: (row) => row.department },
-                    { name: "Date of Birth", selector: (row) => row.birthDate },
-                    { name: "Street", selector: (row) => row.street },
-                    { name: "City", selector: (row) => row.city },
-                    { name: "State", selector: (row) => row.state },
-                    { name: "Zip Code", selector: (row) => row.zipCode },
-                ];
+        - Necessary props :
+            - The data (here, the employees list)
+            - All the columns name, with which element data we are refering to
+                => Should be like the following example :
+                    const columns = [
+                        { name: "First Name", selector: (row) => row.firstName },
+                        { name: "Last Name", selector: (row) => row.lastName },
+                        { name: "Start Date", selector: (row) => row.startDate },
+                        { name: "Department", selector: (row) => row.department },
+                        { name: "Date of Birth", selector: (row) => row.birthDate },
+                        { name: "Street", selector: (row) => row.street },
+                        { name: "City", selector: (row) => row.city },
+                        { name: "State", selector: (row) => row.state },
+                        { name: "Zip Code", selector: (row) => row.zipCode },
+                    ];
+            - The function to delete the row
+            - The function to update the row
+            - The Modal we want see to change row info, which should have as props :
+                - showModal -> Boolean value
+                - SetShowModal
+                - rowValue
+                - setRowValue
+                - handleUpdateRow
 
         - Features :
             - Possibility to search, with a text input, any element on the table

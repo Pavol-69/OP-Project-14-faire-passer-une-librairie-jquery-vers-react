@@ -1,6 +1,6 @@
-import "../../style/generalCSS.scss";
-import "../../style/components/DataTable/DataTable.scss";
-import "../../style/components/DataTable/DataTableLine.scss";
+import "./style/generalCSS.scss";
+import "./style/DataTable.scss";
+import "./style/DataTableLine.scss";
 
 import { useState, useEffect } from "react";
 
