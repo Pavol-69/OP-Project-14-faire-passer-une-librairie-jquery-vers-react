@@ -1,6 +1,7 @@
 import "../style/generalCSS.scss";
 import "../style/pages/EmployeeListPage.scss";
-import DataTable from "../components/DataTable/DataTable";
+//import DataTable from "../components/DataTable/DataTable";
+import DataTable from "dataTable-plugin";
 import { useSelector } from "react-redux";
 import Banner from "../components/Banner";
 import EmployeeForm from "../components/EmployeeForm";

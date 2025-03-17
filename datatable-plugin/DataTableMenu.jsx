@@ -1,6 +1,6 @@
-import "../../style/generalCSS.scss";
-import "../../style/components/DataTable/DataTable.scss";
-import "../../style/components/DataTable/DataTableMenu.scss";
+import "./style/generalCSS.scss";
+import "./style/DataTable.scss";
+import "./style/DataTableMenu.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "font-awesome/css/font-awesome.min.css";

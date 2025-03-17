@@ -57,6 +57,8 @@ This web app has been develop in order to replace an old app made with jQuery
             - Possibility to search, with a text input, any element on the table
             - Possibility to range the data by alphabetical order, or the opposite order
             - Possibility to display 5, 10 or 20 rows on each page
+            - Possibility to go to the next or previous page
+            - Possibility to go to the first or last page
             - Possibility to modify an employee informations
             - Possibility to delete an employee from the list
 
