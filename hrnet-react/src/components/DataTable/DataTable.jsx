@@ -68,7 +68,7 @@ function DataTable({ data, columns, modal, EmployeeUpdate, EmployeeDelete }) {
       )
     );
 
-    setFilteredData(dataBis);
+    setFilteredData([...dataBis]);
   }
 
   // Nous dit si une string est une date ou non

@@ -2,9 +2,16 @@
 
 ## 1. Description
 
-This plugin has been made to display data into a table with the folowwing features : - Possibility to search, with a text input, any element on the table - Possibility to range the data by alphabetical order, or the opposite order - Possibility to display 5, 10 or 20 rows on each page - Possibility to go to the next or previous page - Possibility to go to the first or last page - Possibility to modify an employee informations - Possibility to delete an employee from the list
+    This plugin has been made to display data into a table with the following features :
+        - Possibility to search, with a text input, any element on the table
+        - Possibility to range the data by alphabetical order, or the opposite order
+        - Possibility to display 5, 10 or 20 rows on each page
+        - Possibility to go to the next or previous page
+        - Possibility to go to the first or last page
+        - Possibility to modify an employee informations
+        - Possibility to delete an employee from the list
 
-## 2. Necesarry props
+## 2. Necessary props
 
     - The data, which is a list of elements [{}, {}, {}, ...]
         => Could be a employees list for example, with firstName, lastName, birthDate, ...
