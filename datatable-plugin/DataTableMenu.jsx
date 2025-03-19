@@ -28,7 +28,7 @@ function DataTableMenu({
   // Dans le cas précis où on supprime le dernier élément d'une page
   // => On se retrouve à afficher une page qui n'existe plus
   useEffect(() => {
-    if (numPage > nbTotPages()) {
+    if (numPage > nbTotPages() && numPage > 1) {
       setNumPage(numPage - 1);
     }
   }, [data]);
