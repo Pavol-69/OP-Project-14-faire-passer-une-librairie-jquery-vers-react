@@ -37,3 +37,10 @@
         - rowValue
         - setRowValue
         - handleUpdateRow
+
+## Versions
+
+## Version 1.0.1
+
+    - Correction of Readme
+    - Fix search function bug
