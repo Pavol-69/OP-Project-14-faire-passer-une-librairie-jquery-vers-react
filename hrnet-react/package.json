@@ -19,7 +19,7 @@
     "@mui/material": "^6.4.7",
     "@mui/x-date-pickers": "^7.27.3",
     "@reduxjs/toolkit": "^2.6.0",
-    "datatable-plugin": "^1.0.0",
+    "datatable-plugin": "^1.0.1",
     "dayjs": "^1.11.13",
     "font-awesome": "^4.7.0",
     "react": "^19.0.0",
